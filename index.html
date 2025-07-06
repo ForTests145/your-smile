@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Seu sorriso 💖</title>
+  <style>
+    body {
+      background-color: #fff0f5;
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+      text-align: center;
+      margin: 0;
+    }
+
+    h1 {
+      color: #d63384;
+      font-size: 2.3em;
+      margin-bottom: 40px;
+    }
+
+    .botoes {
+      display: flex;
+      gap: 20px;
+    }
+
+    button {
+      background-color: #d63384;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      border-radius: 10px;
+      font-size: 1.2em;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #b82a6c;
+    }
+
+    .mensagem {
+      margin-top: 30px;
+      font-size: 1.4em;
+      color: #333;
+      max-width: 80%;
+    }
+  </style>
+</head>
+<body>
+  <h1>Já te falei que o seu sorriso é muito lindo?</h1>
+  <div class="botoes">
+    <button onclick="responder('sim')">Sim 😄</button>
+    <button onclick="responder('nao')">Não 😢</button>
+  </div>
+  <div class="mensagem" id="mensagem"></div>
+
+  <script>
+    function responder(resposta) {
+      const mensagem = document.getElementById("mensagem");
+      if (resposta === 'sim') {
+        mensagem.innerHTML = "Ah que bom! Mas não custa repetir: seu sorriso é maravilhoso! 💖";
+      } else {
+        mensagem.innerHTML = "Então deixa eu te contar agora: seu sorriso é simplesmente encantador! ✨";
+      }
+    }
+  </script>
+</body>
+</html>
