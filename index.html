@@ -5,7 +5,7 @@
   <title>Seu sorriso 💖</title>
   <style>
     body {
-      background-color: #ffe6f0;
+      background-color: #fff0f5;
       font-family: 'Arial', sans-serif;
       display: flex;
       justify-content: center;
@@ -17,44 +17,55 @@
     }
 
     h1 {
-      color: #e60073;
-      font-size: 2.5em;
-      margin-bottom: 30px;
+      color: #d63384;
+      font-size: 2.3em;
+      margin-bottom: 40px;
+    }
+
+    .botoes {
+      display: flex;
+      gap: 20px;
     }
 
     button {
-      background-color: #e60073;
+      background-color: #d63384;
       color: white;
       border: none;
-      padding: 15px 25px;
-      border-radius: 8px;
+      padding: 15px 30px;
+      border-radius: 10px;
       font-size: 1.2em;
       cursor: pointer;
       transition: 0.3s;
     }
 
     button:hover {
-      background-color: #cc005f;
+      background-color: #b82a6c;
     }
 
     .mensagem {
-      margin-top: 20px;
-      font-size: 1.3em;
+      margin-top: 30px;
+      font-size: 1.4em;
       color: #333;
-      display: none;
+      max-width: 80%;
     }
   </style>
 </head>
 <body>
   <h1>Já te falei que o seu sorriso é muito lindo?</h1>
-  <button onclick="mostrarMensagem()">Clique aqui 💖</button>
-  <div class="mensagem" id="mensagem">
-    Agora já falei 😊<br>Continue sorrindo sempre!
+  <div class="botoes">
+    <button onclick="responder('sim')">Sim 😄</button>
+    <button onclick="responder('nao')">Não 😢</button>
   </div>
+  <div class="mensagem" id="mensagem"></div>
 
   <script>
-    function mostrarMensagem() {
-      document.getElementById("mensagem").style.display = "block";
+    function responder(resposta) {
+      const mensagem = document.getElementById("mensagem");
+      if (resposta === 'sim') {
+        mensagem.innerHTML = "Ah que bom! Mas não custa repetir: seu sorriso é maravilhoso! 💖";
+      } else {
+        mensagem.innerHTML = "Então deixa eu te contar agora: seu sorriso é simplesmente encantador! ✨";
+      }
     }
   </script>
 </body>
